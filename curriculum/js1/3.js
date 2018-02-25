@@ -5,13 +5,11 @@
  * @returns {string}
  */
 
-const solution = (x) => {
-   if (x < 0 || x === 0){
-     return "";
+const solution = (n, result = "") => {
+   if (n < 0 || n === 0){
+     return result;
    }
-   if (x > 0){
-     return "hello"+solution(x-1);
-   }
+     return solution(n-1, result + "hello");
 };
 
 module.exports = {
